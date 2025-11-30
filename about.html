@@ -22,7 +22,6 @@
       <li><a href="skills.html">Skills</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="resume.html">Resume</a></li>
-
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="nav-icons">
@@ -37,15 +36,10 @@
     <h2>Education</h2>
     <div class="about-text">
       <ul>
-        <li><strong>Master of computer applications</strong> - M. Kumarasamy College of Engineering,Karur. 
-            
-            CGPA: 8.24</li>
-        <li><strong>Bachelor of Science in Physics</strong> - Government Arts College, Karur.
-                    Percentage: 75.6%</li>
-        <li><strong>Higher Secondary Certificate(HSC)</strong> - Cheran Matric Hr Sec School, Karur.         
-                    Percentage: 75.3%</li>
-        <li><strong>Secondary school leaving certificate(SSLC)</strong> - Cheran Matriculation School, Karur.
-                    Percentage: 90.4%</li>
+        <li><strong>Master of Computer Applications</strong> - M. Kumarasamy College of Engineering, Karur. CGPA: 8.24</li>
+        <li><strong>Bachelor of Science in Physics</strong> - Government Arts College, Karur. Percentage: 75.6%</li>
+        <li><strong>Higher Secondary Certificate (HSC)</strong> - Cheran Matric Hr Sec School, Karur. Percentage: 75.3%</li>
+        <li><strong>Secondary School Leaving Certificate (SSLC)</strong> - Cheran Matriculation School, Karur. Percentage: 90.4%</li>
       </ul>
     </div>
 
@@ -59,10 +53,122 @@
     </div>
   </section>
 
+  <!-- Certifications Section -->
+  <section id="certifications">
+    <h2>My Certifications</h2>
+
+    <div class="cert-container">
+      <div class="cert-card">
+        <img src="certificates/c1.jpg" alt="Certificate 1">
+        <p>Foundation of Cloud IoT Edge ML - NPTEL</p>
+      </div>
+      <div class="cert-card">
+        <img src="certificates/c2.jpg" alt="Certificate 2">
+        <p>Cloud Foundations- Advanced - Great Learning</p>
+      </div>
+      <div class="cert-card">
+        <img src="certificates/c3.jpg" alt="Certificate 3">
+        <p>Idea Hackthon - TamilNadu College of Engineering</p>
+      </div>
+      <div class="cert-card">
+        <img src="certificates/c4.jpg" alt="Certificate 4">
+        <p>AI for Beginners - HP Life</p>
+      </div>
+      <div class="cert-card">
+        <img src="certificates/c5.jpg" alt="Certificate 5">
+        <p>Business communication -HP Life</p>
+      </div>
+      <div class="cert-card">
+        <img src="certificates/c6.jpg" alt="Certificate 6">
+        <p>Introduction to Artificial Intelligence - HP Life</p>
+      </div>
+      <div class="cert-card">
+        <img src="certificates/c7.jpg" alt="Certificate 7">
+        <p>Communication Skills - TCS iON</p>
+      </div>
+      <div class="cert-card">
+        <img src="certificates/c8.jpg" alt="Certificate 8">
+        <p>Career Edge - Young Professional - TCS iON</p>
+      </div>
+       <div class="cert-card">
+        <img src="certificates/c9.jpg" alt="Certificate 8">
+        <p>Ethical Hacking -Infosys Springboard</p>
+      </div>
+       <div class="cert-card">
+        <img src="certificates/c10.jpg" alt="Certificate 8">
+        <p>Introduction to generative AI -aws</p>
+      </div>
+       <div class="cert-card">
+        <img src="certificates/c11.jpg" alt="Certificate 8">
+        <p>Amazon Connect AI and ML fundamentals -aws</p>
+      </div>
+
+      <div class="cert-card">
+        <img src="certificates/c12.jpg" alt="Certificate 8">
+        <p>Machine Learning with Python:Foundations - Linkedin Learning</p>
+      </div>
+       <div class="cert-card">
+        <img src="certificates/c13.jpg" alt="Certificate 8">
+        <p>Prompt Engineering with ChatGPT - Linkedin Learning</p>
+      </div>
+       <div class="cert-card">
+        <img src="certificates/c14.jpg" alt="Certificate 8">
+        <p>Describe cloud computing -Linkedin Learning</p>
+      </div>
+
+      <div class="cert-card">
+        <img src="certificates/c15.jpg" alt="Certificate 8">
+        <p>C,C++,Python - SDLC</p>
+      </div>
+       <div class="cert-card">
+        <img src="certificates/c16.jpg" alt="Certificate 8">
+        <p>Prompt Engineering for everyone - CognitiveClass.ai</p>
+      </div>
+       <div class="cert-card">
+        <img src="certificates/c17.jpg" alt="Certificate 8">
+        <p>Technology Job Simulation - Deloitte</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Dheepadharshinee V P. All rights reserved.</p>
   </footer>
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-img" src="" alt="Certificate">
+  <p class="lightbox-caption"></p>
+</div>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.querySelector('.lightbox-img');
+  const lightboxCaption = document.querySelector('.lightbox-caption');
+  const closeBtn = document.querySelector('.close');
+
+  // Select all cert images
+  document.querySelectorAll('.cert-card img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+      lightboxCaption.textContent = img.nextElementSibling.textContent;
+    });
+  });
+
+  // Close lightbox
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  // Close on clicking outside the image
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
 
 </body>
 </html>
